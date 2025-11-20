@@ -76,6 +76,7 @@
             this.Name = "ucDays";
             this.Size = new System.Drawing.Size(173, 142);
             this.Load += new System.EventHandler(this.ucDays_Load);
+            this.Click += new System.EventHandler(this.ucDays_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

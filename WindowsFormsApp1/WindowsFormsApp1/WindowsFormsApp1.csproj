@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSchedules.Designer.cs">
+      <DependentUpon>AddSchedules.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,12 +60,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedule.cs" />
     <Compile Include="ucDays.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucDays.Designer.cs">
       <DependentUpon>ucDays.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSchedule.Designer.cs">
+      <DependentUpon>UpdateSchedule.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddSchedules.resx">
+      <DependentUpon>AddSchedules.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +90,9 @@
     </Compile>
     <EmbeddedResource Include="ucDays.resx">
       <DependentUpon>ucDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSchedule.resx">
+      <DependentUpon>UpdateSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

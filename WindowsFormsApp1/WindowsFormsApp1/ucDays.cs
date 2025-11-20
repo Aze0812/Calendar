@@ -10,63 +10,117 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    
+    //user control za for panels
     public partial class ucDays : UserControl
     {
         string _day, date, weekday;
+        private List<Schedule> daySchedules = new List<Schedule>();
+
         public ucDays(string day)
         {
             InitializeComponent();
             _day = day;
             label1.Text = day;
             checkBox1.Hide();
-            date = day + "/" + Form1._month + "/" + Form1._year;
 
+            if (!string.IsNullOrEmpty(day))
+            {
+                date = day + "/" + Form1._month + "/" + Form1._year;
+            }
+            else
+            {
+                date = ""; 
+            }
+        }
 
+        public void SetSchedules(List<Schedule> schedules)
+        {
+            daySchedules = schedules;
+            UpdateScheduleDisplay();
+        }
+
+        private void UpdateScheduleDisplay()
+        {
+            if (daySchedules.Count > 0)
+            {
+               
+                this.BackColor = Color.FromArgb(255, 176, 156); 
+
+              
+                if (panel1 != null)
+                {
+                    panel1.BackColor = Color.FromArgb(255, 176, 156);
+                }
+
+              
+                label1.ForeColor = Color.FromArgb(0, 0, 139); 
+            }
         }
 
         public void Sundays()
         {
-           try
+            if (string.IsNullOrEmpty(date))
+            {
+                return;
+            }
+
+            try
             {
                 DateTime day = DateTime.Parse(date);
                 weekday = day.ToString("ddd");
 
-                if (weekday == "Sun")
-                {
-                    this.BackColor = Color.FromArgb(255, 128, 128);
-                }
-                else
+                if (weekday != "Sun" && daySchedules.Count == 0)
                 {
                     label1.ForeColor = Color.FromArgb(64, 64, 64);
-
                 }
             }
             catch (Exception)
             {
-
+                //empty catch for errors
             }
         }
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == false)
+          
+            if (string.IsNullOrEmpty(_day))
             {
-                checkBox1.Checked = true;
-                //fix
-                this.BackColor = Color.FromArgb( 25, 10, 79);
+                return;
             }
-            else
-            {
-                checkBox1.Checked = false;
-                this.BackColor = Color.White;
 
+            if (daySchedules.Count > 0)
+            {
+                ShowScheduleDetails();
             }
+        }
+
+        private void ShowScheduleDetails()
+        {
+            StringBuilder details = new StringBuilder();
+            details.AppendLine("Schedules for " + date + ":\n");
+
+            foreach (var schedule in daySchedules)
+            {
+                details.AppendLine("Schedule Name: " + schedule.Name);
+                details.AppendLine("Schedule Description:");
+                details.AppendLine(schedule.Description);
+                details.AppendLine(); 
+            }
+
+            MessageBox.Show(details.ToString(), "Schedule Details",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public DateTime FullDate;
+
+        private void ucDays_Click(object sender, EventArgs e)
+        {
+            panel1_Click(sender, e);
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            panel1_Click(sender, e);
         }
 
         private void ucDays_Load(object sender, EventArgs e)
