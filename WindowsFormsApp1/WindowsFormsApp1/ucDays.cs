@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
             {
                 checkBox1.Checked = true;
                 //fix
-                this.checkBox1 = Color.FromArgb( 25, 10, 79);
+                this.BackColor = Color.FromArgb( 25, 10, 79);
             }
             else
             {
