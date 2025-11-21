@@ -45,14 +45,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PrevPicBoxClick = new System.Windows.Forms.PictureBox();
+            this.NxtPicBoxClick = new System.Windows.Forms.PictureBox();
             this.AddSchedBtn = new System.Windows.Forms.Button();
             this.BckBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.UpdateBtnClick1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrevPicBoxClick)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NxtPicBoxClick)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -224,33 +224,33 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Month";
             // 
-            // pictureBox1
+            // PrevPicBoxClick
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1193, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PrevPicBoxClick.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PrevPicBoxClick.BackColor = System.Drawing.Color.Transparent;
+            this.PrevPicBoxClick.Image = ((System.Drawing.Image)(resources.GetObject("PrevPicBoxClick.Image")));
+            this.PrevPicBoxClick.Location = new System.Drawing.Point(1193, 14);
+            this.PrevPicBoxClick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PrevPicBoxClick.Name = "PrevPicBoxClick";
+            this.PrevPicBoxClick.Size = new System.Drawing.Size(39, 30);
+            this.PrevPicBoxClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PrevPicBoxClick.TabIndex = 6;
+            this.PrevPicBoxClick.TabStop = false;
+            this.PrevPicBoxClick.Click += new System.EventHandler(this.PrevPicBox_Click);
             // 
-            // pictureBox2
+            // NxtPicBoxClick
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1235, 14);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.NxtPicBoxClick.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NxtPicBoxClick.BackColor = System.Drawing.Color.Transparent;
+            this.NxtPicBoxClick.Image = ((System.Drawing.Image)(resources.GetObject("NxtPicBoxClick.Image")));
+            this.NxtPicBoxClick.Location = new System.Drawing.Point(1235, 14);
+            this.NxtPicBoxClick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NxtPicBoxClick.Name = "NxtPicBoxClick";
+            this.NxtPicBoxClick.Size = new System.Drawing.Size(41, 30);
+            this.NxtPicBoxClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.NxtPicBoxClick.TabIndex = 7;
+            this.NxtPicBoxClick.TabStop = false;
+            this.NxtPicBoxClick.Click += new System.EventHandler(this.NxtPicBox_Click);
             // 
             // AddSchedBtn
             // 
@@ -260,7 +260,7 @@
             this.AddSchedBtn.TabIndex = 8;
             this.AddSchedBtn.Text = "Add Schedule";
             this.AddSchedBtn.UseVisualStyleBackColor = true;
-            this.AddSchedBtn.Click += new System.EventHandler(this.button1_Click);
+            this.AddSchedBtn.Click += new System.EventHandler(this.AddSchedBtn_1);
             // 
             // BckBtn
             // 
@@ -272,26 +272,26 @@
             this.BckBtn.UseVisualStyleBackColor = true;
             this.BckBtn.Click += new System.EventHandler(this.BckBtn_Click);
             // 
-            // button1
+            // UpdateBtnClick1
             // 
-            this.button1.Location = new System.Drawing.Point(820, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 32);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Update Schedule";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.UpdateBtnClick1.Location = new System.Drawing.Point(820, 12);
+            this.UpdateBtnClick1.Name = "UpdateBtnClick1";
+            this.UpdateBtnClick1.Size = new System.Drawing.Size(154, 32);
+            this.UpdateBtnClick1.TabIndex = 10;
+            this.UpdateBtnClick1.Text = "Update Schedule";
+            this.UpdateBtnClick1.UseVisualStyleBackColor = true;
+            this.UpdateBtnClick1.Click += new System.EventHandler(this.UpdateBtn_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 1040);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.UpdateBtnClick1);
             this.Controls.Add(this.BckBtn);
             this.Controls.Add(this.AddSchedBtn);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.NxtPicBoxClick);
+            this.Controls.Add(this.PrevPicBoxClick);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -309,8 +309,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrevPicBoxClick)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NxtPicBoxClick)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,11 +334,11 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PrevPicBoxClick;
+        private System.Windows.Forms.PictureBox NxtPicBoxClick;
         private System.Windows.Forms.Button AddSchedBtn;
         private System.Windows.Forms.Button BckBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button UpdateBtnClick1;
     }
 }
 

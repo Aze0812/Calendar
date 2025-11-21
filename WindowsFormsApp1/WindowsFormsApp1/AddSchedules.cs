@@ -24,45 +24,46 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             IsSaved = false;
-            if (dateTimePicker1 != null)
+            if (dateTimePickerAddSched != null)
             {
-                dateTimePicker1.Value = DateTime.Now;
+                dateTimePickerAddSched.Value = DateTime.Now;
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbAddSched_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //type of schedule
-            
+            //Type of schedule selected
+
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void dateTimePickerAddSched_ValueChanged(object sender, EventArgs e)
         {
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void TxtBoxAddSched_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelBtnAddSched_Click(object sender, EventArgs e)
         {
             //cancel button
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SaveBtnAddSched_Click(object sender, EventArgs e)
         {
             //save button 
-            if (string.IsNullOrWhiteSpace(comboBox1.Text))
+            if (string.IsNullOrWhiteSpace(CmbAddSched.Text))
             {
                 MessageBox.Show("Please enter a schedule name.", "Validation Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            ScheduleDate = dateTimePicker1.Value.Date;
-            ScheduleName = comboBox1.Text.Trim();
-            ScheduleDescription = textBox2.Text.Trim();
+            ScheduleDate = dateTimePickerAddSched.Value.Date;
+            ScheduleName = CmbAddSched.Text.Trim();
+            ScheduleDescription = TxtBoxAddSched.Text.Trim();
             IsSaved = true;
 
             MessageBox.Show("Schedule added successfully!", "Success",
@@ -73,11 +74,12 @@ namespace WindowsFormsApp1
 
         private void AddSchedules_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("Checking");
-            comboBox1.Items.Add("Open");
-            comboBox1.Items.Add("Close");
-            comboBox1.Items.Add("Restock");
-            comboBox1.Items.Add("Clean");
+            CmbAddSched.Items.Add("Checking");
+            CmbAddSched.Items.Add("Open");
+            CmbAddSched.Items.Add("Close");
+            CmbAddSched.Items.Add("Restock");
+            CmbAddSched.Items.Add("Clean");
         }
+
     }
 }

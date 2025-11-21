@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.SaveBtn = new System.Windows.Forms.Button();
+            this.txtBoxUpdSched = new System.Windows.Forms.TextBox();
+            this.CmbTypeOfSchedUpd = new System.Windows.Forms.ComboBox();
+            this.SaveBtnUpdSchedClick = new System.Windows.Forms.Button();
             this.BckBtn = new System.Windows.Forms.Button();
             this.DelBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtBoxUpdSched
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 28);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(482, 178);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtBoxUpdSched.Location = new System.Drawing.Point(28, 28);
+            this.txtBoxUpdSched.Multiline = true;
+            this.txtBoxUpdSched.Name = "txtBoxUpdSched";
+            this.txtBoxUpdSched.Size = new System.Drawing.Size(482, 178);
+            this.txtBoxUpdSched.TabIndex = 1;
+            this.txtBoxUpdSched.TextChanged += new System.EventHandler(this.TxtBoxUpdSched_TextChanged);
             // 
-            // comboBox1
+            // CmbTypeOfSchedUpd
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(28, 242);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(246, 24);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.CmbTypeOfSchedUpd.FormattingEnabled = true;
+            this.CmbTypeOfSchedUpd.Location = new System.Drawing.Point(28, 242);
+            this.CmbTypeOfSchedUpd.Name = "CmbTypeOfSchedUpd";
+            this.CmbTypeOfSchedUpd.Size = new System.Drawing.Size(246, 24);
+            this.CmbTypeOfSchedUpd.TabIndex = 2;
+            this.CmbTypeOfSchedUpd.SelectedIndexChanged += new System.EventHandler(this.CmbTypeOfSchedUpd_SelectedIndexChanged);
             // 
-            // SaveBtn
+            // SaveBtnUpdSchedClick
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(28, 389);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(103, 35);
-            this.SaveBtn.TabIndex = 3;
-            this.SaveBtn.Text = "Save";
-            this.SaveBtn.UseVisualStyleBackColor = true;
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            this.SaveBtnUpdSchedClick.Location = new System.Drawing.Point(407, 389);
+            this.SaveBtnUpdSchedClick.Name = "SaveBtnUpdSchedClick";
+            this.SaveBtnUpdSchedClick.Size = new System.Drawing.Size(103, 35);
+            this.SaveBtnUpdSchedClick.TabIndex = 3;
+            this.SaveBtnUpdSchedClick.Text = "Save";
+            this.SaveBtnUpdSchedClick.UseVisualStyleBackColor = true;
+            this.SaveBtnUpdSchedClick.Click += new System.EventHandler(this.SaveBtnUpdSched_Click);
             // 
             // BckBtn
             // 
-            this.BckBtn.Location = new System.Drawing.Point(412, 389);
+            this.BckBtn.Location = new System.Drawing.Point(28, 389);
             this.BckBtn.Name = "BckBtn";
             this.BckBtn.Size = new System.Drawing.Size(98, 35);
             this.BckBtn.TabIndex = 4;
@@ -77,7 +77,7 @@
             // 
             // DelBtn
             // 
-            this.DelBtn.Location = new System.Drawing.Point(205, 389);
+            this.DelBtn.Location = new System.Drawing.Point(207, 389);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(116, 35);
             this.DelBtn.TabIndex = 5;
@@ -112,9 +112,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.BckBtn);
-            this.Controls.Add(this.SaveBtn);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SaveBtnUpdSchedClick);
+            this.Controls.Add(this.CmbTypeOfSchedUpd);
+            this.Controls.Add(this.txtBoxUpdSched);
             this.Name = "UpdateSchedules";
             this.Text = "UpdateSchedule";
             this.Load += new System.EventHandler(this.UpdateSchedule_Load);
@@ -124,9 +124,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.TextBox txtBoxUpdSched;
+        private System.Windows.Forms.ComboBox CmbTypeOfSchedUpd;
+        private System.Windows.Forms.Button SaveBtnUpdSchedClick;
         private System.Windows.Forms.Button BckBtn;
         private System.Windows.Forms.Button DelBtn;
         private System.Windows.Forms.Label label1;

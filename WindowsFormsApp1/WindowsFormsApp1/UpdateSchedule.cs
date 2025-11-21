@@ -36,42 +36,37 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            comboBox1.Items.Clear();
-            comboBox1.Items.Add("Open");
-            comboBox1.Items.Add("Close");
-            comboBox1.Items.Add("Restock");
-            comboBox1.Items.Add("Clean");
+            CmbTypeOfSchedUpd.Items.Clear();
+            CmbTypeOfSchedUpd.Items.Add("Open");
+            CmbTypeOfSchedUpd.Items.Add("Close");
+            CmbTypeOfSchedUpd.Items.Add("Restock");
+            CmbTypeOfSchedUpd.Items.Add("Clean");
 
            
             if (daySchedules.Count > 0)
             {
                 currentSchedule = daySchedules[0];
-                comboBox1.SelectedItem = currentSchedule.Name;
-                textBox1.Text = currentSchedule.Description;
+                CmbTypeOfSchedUpd.SelectedItem = currentSchedule.Name;
+                txtBoxUpdSched.Text = currentSchedule.Description;
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbTypeOfSchedUpd_SelectedIndexChanged(object sender, EventArgs e)
         {
            
-            string selectedName = comboBox1.SelectedItem?.ToString();
+            string selectedName = CmbTypeOfSchedUpd.SelectedItem?.ToString();
             if (!string.IsNullOrEmpty(selectedName))
             {
                 var schedule = daySchedules.FirstOrDefault(s => s.Name == selectedName);
                 if (schedule != null)
                 {
                     currentSchedule = schedule;
-                    textBox1.Text = currentSchedule.Description;
-                }
-                else
-                {
-                    //if no schedule exists with this name, clears the description
-                    textBox1.Text = "";
+                    txtBoxUpdSched.Text = currentSchedule.Description;
                 }
             }
         }
 
-        private void SaveBtn_Click(object sender, EventArgs e)
+        private void SaveBtnUpdSched_Click(object sender, EventArgs e)
         {
             if (currentSchedule == null)
             {
@@ -79,15 +74,15 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            if (comboBox1.SelectedItem == null)
+            if (CmbTypeOfSchedUpd.SelectedItem == null)
             {
                 MessageBox.Show("Please select a schedule type.", "No Type Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             //update schedule name and description
-            currentSchedule.Name = comboBox1.SelectedItem.ToString();
-            currentSchedule.Description = textBox1.Text;
+            currentSchedule.Name = CmbTypeOfSchedUpd.SelectedItem.ToString();
+            currentSchedule.Description = txtBoxUpdSched.Text;
 
             MessageBox.Show("Schedule updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             IsModified = true;
@@ -124,6 +119,11 @@ namespace WindowsFormsApp1
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtBoxUpdSched_TextChanged(object sender, EventArgs e)
         {
 
         }

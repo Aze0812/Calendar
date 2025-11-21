@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
         {
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void NxtPicBox_Click(object sender, EventArgs e)
         {
             //next month
             _month += 1;
@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
             showDay(_month, _year);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PrevPicBox_Click(object sender, EventArgs e)
         {
             //previous month
             _month -= 1;
@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
             showDay(_month, _year);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddSchedBtn_1(object sender, EventArgs e)
         {
             //add Schedule
             AddSchedules AddSched = new AddSchedules();
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
             mf.Close();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void UpdateBtn_Click_1(object sender, EventArgs e)
         {
             //Update button schedule
             //What the helly (part Vibe code :C)

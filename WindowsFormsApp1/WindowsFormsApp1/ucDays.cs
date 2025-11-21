@@ -118,6 +118,11 @@ namespace WindowsFormsApp1
             panel1_Click(sender, e);
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
             panel1_Click(sender, e);
