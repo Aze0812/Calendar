@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,14 +44,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.PrevPicBoxClick = new System.Windows.Forms.PictureBox();
-            this.NxtPicBoxClick = new System.Windows.Forms.PictureBox();
             this.AddSchedBtn = new System.Windows.Forms.Button();
             this.BckBtn = new System.Windows.Forms.Button();
             this.UpdateBtnClick1 = new System.Windows.Forms.Button();
+            this.NxtBtn = new System.Windows.Forms.Button();
+            this.PrevBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PrevPicBoxClick)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NxtPicBoxClick)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -224,34 +221,6 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Month";
             // 
-            // PrevPicBoxClick
-            // 
-            this.PrevPicBoxClick.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PrevPicBoxClick.BackColor = System.Drawing.Color.Transparent;
-            this.PrevPicBoxClick.Image = ((System.Drawing.Image)(resources.GetObject("PrevPicBoxClick.Image")));
-            this.PrevPicBoxClick.Location = new System.Drawing.Point(1193, 14);
-            this.PrevPicBoxClick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PrevPicBoxClick.Name = "PrevPicBoxClick";
-            this.PrevPicBoxClick.Size = new System.Drawing.Size(39, 30);
-            this.PrevPicBoxClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PrevPicBoxClick.TabIndex = 6;
-            this.PrevPicBoxClick.TabStop = false;
-            this.PrevPicBoxClick.Click += new System.EventHandler(this.PrevPicBox_Click);
-            // 
-            // NxtPicBoxClick
-            // 
-            this.NxtPicBoxClick.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.NxtPicBoxClick.BackColor = System.Drawing.Color.Transparent;
-            this.NxtPicBoxClick.Image = ((System.Drawing.Image)(resources.GetObject("NxtPicBoxClick.Image")));
-            this.NxtPicBoxClick.Location = new System.Drawing.Point(1235, 14);
-            this.NxtPicBoxClick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NxtPicBoxClick.Name = "NxtPicBoxClick";
-            this.NxtPicBoxClick.Size = new System.Drawing.Size(41, 30);
-            this.NxtPicBoxClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.NxtPicBoxClick.TabIndex = 7;
-            this.NxtPicBoxClick.TabStop = false;
-            this.NxtPicBoxClick.Click += new System.EventHandler(this.NxtPicBox_Click);
-            // 
             // AddSchedBtn
             // 
             this.AddSchedBtn.Location = new System.Drawing.Point(980, 12);
@@ -282,16 +251,36 @@
             this.UpdateBtnClick1.UseVisualStyleBackColor = true;
             this.UpdateBtnClick1.Click += new System.EventHandler(this.UpdateBtn_Click_1);
             // 
+            // NxtBtn
+            // 
+            this.NxtBtn.Location = new System.Drawing.Point(1235, 14);
+            this.NxtBtn.Name = "NxtBtn";
+            this.NxtBtn.Size = new System.Drawing.Size(50, 30);
+            this.NxtBtn.TabIndex = 11;
+            this.NxtBtn.Text = ">";
+            this.NxtBtn.UseVisualStyleBackColor = true;
+            this.NxtBtn.Click += new System.EventHandler(this.NxtBtn_Click);
+            // 
+            // PrevBtn
+            // 
+            this.PrevBtn.Location = new System.Drawing.Point(1185, 12);
+            this.PrevBtn.Name = "PrevBtn";
+            this.PrevBtn.Size = new System.Drawing.Size(44, 32);
+            this.PrevBtn.TabIndex = 12;
+            this.PrevBtn.Text = "<";
+            this.PrevBtn.UseVisualStyleBackColor = true;
+            this.PrevBtn.Click += new System.EventHandler(this.PrevBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 1040);
+            this.Controls.Add(this.PrevBtn);
+            this.Controls.Add(this.NxtBtn);
             this.Controls.Add(this.UpdateBtnClick1);
             this.Controls.Add(this.BckBtn);
             this.Controls.Add(this.AddSchedBtn);
-            this.Controls.Add(this.NxtPicBoxClick);
-            this.Controls.Add(this.PrevPicBoxClick);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -309,8 +298,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PrevPicBoxClick)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NxtPicBoxClick)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,11 +321,11 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox PrevPicBoxClick;
-        private System.Windows.Forms.PictureBox NxtPicBoxClick;
         private System.Windows.Forms.Button AddSchedBtn;
         private System.Windows.Forms.Button BckBtn;
         private System.Windows.Forms.Button UpdateBtnClick1;
+        private System.Windows.Forms.Button NxtBtn;
+        private System.Windows.Forms.Button PrevBtn;
     }
 }
 

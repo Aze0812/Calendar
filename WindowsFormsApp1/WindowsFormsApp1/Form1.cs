@@ -34,30 +34,6 @@ namespace WindowsFormsApp1
         {
         }
 
-        private void NxtPicBox_Click(object sender, EventArgs e)
-        {
-            //next month
-            _month += 1;
-            if (_month > 12)
-            {
-                _month = 1;
-                _year += 1;
-            }
-            showDay(_month, _year);
-        }
-
-        private void PrevPicBox_Click(object sender, EventArgs e)
-        {
-            //previous month
-            _month -= 1;
-            if (_month < 1)
-            {
-                _month = 12;
-                _year -= 1;
-            }
-            showDay(_month, _year);
-        }
-
         private void AddSchedBtn_1(object sender, EventArgs e)
         {
             //add Schedule
@@ -129,6 +105,29 @@ namespace WindowsFormsApp1
                     }
                 }
             }
+        }
+
+        private void PrevBtn_Click(object sender, EventArgs e)
+        {
+            _month -= 1;
+            if (_month < 1)
+            {
+                _month = 12;
+                _year -= 1;
+            }
+            showDay(_month, _year);
+        }
+
+        private void NxtBtn_Click(object sender, EventArgs e)
+        {
+            //next month
+            _month += 1;
+            if (_month > 12)
+            {
+                _month = 1;
+                _year += 1;
+            }
+            showDay(_month, _year);
         }
 
         private void showDay(int month, int year)
