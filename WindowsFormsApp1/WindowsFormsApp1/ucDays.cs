@@ -43,17 +43,11 @@ namespace WindowsFormsApp1
         {
             if (daySchedules.Count > 0)
             {
-               
-                this.BackColor = Color.FromArgb(255, 176, 156); 
-
-              
                 if (panel1 != null)
                 {
+                    //color change if schedule exists. 
                     panel1.BackColor = Color.FromArgb(255, 176, 156);
                 }
-
-              
-                label1.ForeColor = Color.FromArgb(0, 0, 139); 
             }
         }
 
@@ -104,7 +98,7 @@ namespace WindowsFormsApp1
                 details.AppendLine("Schedule Name: " + schedule.Name);
                 details.AppendLine("Schedule Description:");
                 details.AppendLine(schedule.Description);
-                details.AppendLine(); 
+                details.AppendLine("---------------------------------------"); 
             }
 
             MessageBox.Show(details.ToString(), "Schedule Details",
